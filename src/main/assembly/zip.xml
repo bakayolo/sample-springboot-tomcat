@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<assembly>
+	<id>zip</id>
+
+	<formats>
+		<format>zip</format>
+	</formats>
+
+	<includeBaseDirectory>true</includeBaseDirectory>
+
+	<dependencySets>
+		<dependencySet>
+			<outputDirectory>lib</outputDirectory>
+			<useTransitiveFiltering>true</useTransitiveFiltering>
+			<includes>
+				<include>*</include>
+			</includes>
+		</dependencySet>
+	</dependencySets>
+
+	<fileSets>
+		<fileSet>
+			<filtered>true</filtered>
+			<directory>src/main/bin</directory>
+			<outputDirectory>bin</outputDirectory>
+			<fileMode>0755</fileMode>
+			<directoryMode>0755</directoryMode>
+			<lineEnding>unix</lineEnding>
+			<includes>
+				<include>*</include>
+			</includes>
+		</fileSet>
+		<fileSet>
+			<directory>src/main/bin</directory>
+			<outputDirectory>logs</outputDirectory>
+			<excludes>
+				<exclude>*</exclude>
+			</excludes>
+		</fileSet>
+	</fileSets>
+	<files>
+	    <file>
+	      <source>src/main/resources/logback.prod</source>
+	      <outputDirectory>config</outputDirectory>
+	      <destName>logback.xml</destName>
+	    </file>
+	    <file>
+	      <source>src/main/resources/application.yml</source>
+	      <outputDirectory>config</outputDirectory>
+	      <destName>application.yml</destName>
+	    </file>
+	</files>
+
+</assembly>
