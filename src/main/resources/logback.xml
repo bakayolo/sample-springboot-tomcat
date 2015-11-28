@@ -21,7 +21,7 @@
         </rollingPolicy>
     </appender>
 
-    <logger name="org.springframework" level="DEBUG"/>
+    <logger name="org.springframework" level="ERROR"/>
 	<logger name="fr.bappr.sbt" level="DEBUG"/>
 	<logger name="org.springframework.context.annotation.ConfigurationClassEnhancer" level="ERROR"/>
 

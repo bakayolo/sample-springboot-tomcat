@@ -16,7 +16,7 @@ import fr.bappr.sbt.service.DefaultService;
  * 
  */
 @RestController
-@RequestMapping(value= "/")
+@RequestMapping(value= "/api/default")
 public class DefaultController {
 
 	/** Logger */
