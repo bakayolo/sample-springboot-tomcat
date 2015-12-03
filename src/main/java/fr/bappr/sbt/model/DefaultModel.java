@@ -9,7 +9,4 @@ public class DefaultModel {
 
 	private String msg;
 
-	public DefaultModel() {
-	}
-
 }
