@@ -20,7 +20,7 @@ public class MapperConfig {
 	 * @return
 	 */
 	@Bean
-	public ObjectMapper getObjMapper() {
+    public ObjectMapper objectMapper() {
         return new ObjectMapper();
 	}
 
