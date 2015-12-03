@@ -4,18 +4,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import fr.bappr.sbt.model.DefaultModel;
-import fr.bappr.sbt.repository.DefaultRepository;
-import fr.bappr.sbt.service.DefaultService;
+import fr.bappr.sbt.repository.MyRepository;
+import fr.bappr.sbt.service.MyService;
 
 @Service
-public class DefaultServiceImpl implements DefaultService {
+public class MyDefaultService implements MyService {
 
 	/** repository */
 	@Autowired
-	private DefaultRepository repo;
+	private MyRepository repo;
 
-	public DefaultModel getModel() {
-		DefaultModel model = repo.getModel();
+	@Override
+    public DefaultModel getModel() {
+		DefaultModel model = this.repo.getModel();
 		model.setMsg("Hello World !");
 		return model;
 	}

@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import fr.bappr.sbt.model.DefaultModel;
-import fr.bappr.sbt.service.DefaultService;
+import fr.bappr.sbt.service.MyService;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -21,13 +21,13 @@ import lombok.extern.slf4j.Slf4j;
 public class DefaultController {
 
 	@Autowired
-	private DefaultService defaultService;
+	private MyService myService;
 
 	@RequestMapping(method= RequestMethod.GET)
 	public DefaultModel get() {
 	    log.info("Entree dans la methode");
 
-		return this.defaultService.getModel();
+		return this.myService.getModel();
 	}
 
 }

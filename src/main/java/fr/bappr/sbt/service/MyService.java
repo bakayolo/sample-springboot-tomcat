@@ -8,7 +8,7 @@ import fr.bappr.sbt.model.DefaultModel;
  * @author BAPPR
  *
  */
-public interface DefaultService {
+public interface MyService {
 
 	DefaultModel getModel();
 
