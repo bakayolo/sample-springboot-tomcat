@@ -21,8 +21,7 @@ public class MapperConfig {
 	 */
 	@Bean
 	public ObjectMapper getObjMapper() {
-		ObjectMapper mapper = new ObjectMapper();
-		return mapper;
+        return new ObjectMapper();
 	}
 
 }
