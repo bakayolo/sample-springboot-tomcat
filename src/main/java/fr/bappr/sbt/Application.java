@@ -1,9 +1,7 @@
 package fr.bappr.sbt;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * Point d'entrée unique de l'application
@@ -11,9 +9,7 @@ import org.springframework.context.annotation.Configuration;
  * @author BAPPR
  *
  */
-@Configuration
-@EnableAutoConfiguration
-@ComponentScan
+@SpringBootApplication
 public class Application {
 
 	/** main */
