@@ -22,15 +22,6 @@
 		<!-- Version of dependencies -->
 		<version.lombok>1.16.2</version.lombok>
 
-		<!-- Version of maven plugins -->
-		<version.plugin.maven-eclipse-plugin>2.9</version.plugin.maven-eclipse-plugin>
-		<version.plugin.maven-compiler-plugin>2.3</version.plugin.maven-compiler-plugin>
-		<version.plugin.maven-resources-plugin>2.4.3</version.plugin.maven-resources-plugin>
-		<version.plugin.maven-source-plugin>2.1.2</version.plugin.maven-source-plugin>
-		<version.plugin.maven-javadoc-plugin>2.7</version.plugin.maven-javadoc-plugin>
-		<version.plugin.maven-release-plugin>2.5.1</version.plugin.maven-release-plugin>
-		<version.plugin.exec-maven-plugin>1.2.1</version.plugin.exec-maven-plugin>
-		<version.plugin.maven-deploy-plugin>2.8.1</version.plugin.maven-deploy-plugin>
 	</properties>
 
 	<dependencies>
