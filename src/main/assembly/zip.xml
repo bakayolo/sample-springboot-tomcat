@@ -20,6 +20,14 @@
 
 	<fileSets>
 		<fileSet>
+			<directory>src/main/resources</directory>
+			<outputDirectory>config</outputDirectory>
+			<excludes>
+				<exclude>application.*</exclude>
+				<exclude>logback.*</exclude>
+			</excludes>
+		</fileSet>
+		<fileSet>
 			<filtered>true</filtered>
 			<directory>src/main/bin</directory>
 			<outputDirectory>bin</outputDirectory>
@@ -31,7 +39,7 @@
 			</includes>
 		</fileSet>
 		<fileSet>
-			<directory>src/main/bin</directory>
+			<directory>src/main/resources</directory>
 			<outputDirectory>logs</outputDirectory>
 			<excludes>
 				<exclude>*</exclude>
@@ -45,7 +53,7 @@
 	      <destName>logback.xml</destName>
 	    </file>
 	    <file>
-	      <source>src/main/resources/application.yml</source>
+	      <source>src/main/resources/application.prod</source>
 	      <outputDirectory>config</outputDirectory>
 	      <destName>application.yml</destName>
 	    </file>

@@ -1,0 +1,17 @@
+###################
+## Configuration ##
+###################
+
+## Serveur ##
+server:
+    port: 8080
+
+## Logging ##
+logging:
+    config: /home/sbt/config/logback.xml
+
+## Spring ##
+spring:
+    main:
+        show_banner: true
+
