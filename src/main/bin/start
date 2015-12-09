@@ -1,0 +1,24 @@
+# script courant
+SCRIPT=$0
+SCRIPTDIR="$(dirname "$SCRIPT")";
+
+# Configuration Java
+JAVA=/usr/bin/java
+JAVA_OPTS="-Xms256m -Xmx2048m"
+
+# Configuration Batch
+LIB_DIR=${SCRIPTDIR}/../lib/
+LOG_DIR=${SCRIPTDIR}/../logs
+CFG_DIR=${SCRIPTDIR}/../config
+APP_CFG_FILE=application.yml
+MAIN_CLASS=fr.bappr.sbt.Application
+
+# Configuration Classpath
+CLASSPATH="." && for i in `ls ${LIB_DIR}/*.jar`; do CLASSPATH=${CLASSPATH}:${i}; done;
+export CLASSPATH
+
+# Options (generales) du batch
+BATCH_OPTS="-Dspring.config.location=${CFG_DIR}/application.yml"
+
+echo "Starting instance"
+nohup ${JAVA} `echo ${JAVA_OPTS}` `echo ${BATCH_OPTS}` ${MAIN_CLASS} >> ${LOG_DIR}/sbt.log 2>&1 &
